@@ -26,8 +26,11 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
       <p>HOME PAGE</p>
       <Link to="/about">Go to the about page</Link>
       <br />
-      <button onClick={() => navigate("/layout/3")}>
-        Go to layout, with a number
+      <button onClick={() => navigate(`/layout/${incrementAmount}`)}>
+        Go to layout, with a increment amount number
+      </button>
+      <button onClick={() => navigate(`/layout/${count}`)}>
+        Go to layout, with a count number
       </button>
       <h2>COUNTER:</h2>
       <button onClick={() => dispatch(increment())}>+1</button>
