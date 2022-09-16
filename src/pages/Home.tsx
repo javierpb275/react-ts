@@ -41,6 +41,14 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
           handleChange(e.target.value)
         }
       />
+      <input
+        type="number"
+        onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
+          if (e.key === "Enter") {
+            console.log("you press enter");
+          }
+        }}
+      />
       <p>count: {count}</p>
       <p>increment amount: {incrementAmount}</p>
     </div>
