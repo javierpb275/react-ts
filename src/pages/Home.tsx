@@ -32,7 +32,12 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
       <h2>COUNTER:</h2>
       <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
-      <input type="number" onChange={(e) => handleChange(e.target.value)} />
+      <input
+        type="number"
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          handleChange(e.target.value)
+        }
+      />
       <p>count: {count}</p>
       <p>increment amount: {incrementAmount}</p>
     </div>
